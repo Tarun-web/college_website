@@ -1,0 +1,107 @@
+.full-container{
+    width: 100vw;
+}
+.logo-container{
+    /* flex: 2; */
+    width: 100%;
+    align-items: center;
+}
+.logo-container .logo{
+    flex: 1;
+}
+.logo-container img{
+    width: 100%;
+    height: auto;
+}
+.logo-container a > img{
+    /* width: 200px !important;
+    height: 100% !important; */
+    /* padding-right: 10px; */
+}
+.logo-container a:last-child > img{
+    filter: brightness(1.25);
+}
+.logo-container{
+    transition: all 0.2s ease;
+}
+.logo-container.column {
+    flex-direction: column;
+    gap: 20px;
+}
+
+header .nav-link{
+    position: relative;
+    transition: all 0.2s ease;
+}
+
+
+/* HOVER ON MENU ITEMS */
+.hover-item::after{
+    content: '';
+    height: 3px;
+    width: 100%;
+    position: absolute;
+    bottom: 13px;
+    left: 0;
+    border-radius: 3px;
+    background: orange;
+    opacity: 0;
+    transition: all 0.2s ease;
+}
+.hover-item:hover.hover-item::after{
+    opacity: 0.7;
+    bottom: 10px;
+}
+
+
+
+/* MENU BACKGROUND */
+.nav-link strong{
+    color: #006EB7;
+}
+.nav-link.active-color strong{
+    color: rgb(52, 52, 52);
+    
+}
+
+
+@media screen and (max-width: 1920px) and (min-width: 951px){
+    .nav-link strong{
+        color: #fff;
+    }
+    .nav-link.active-color strong{
+        color: rgb(211, 211, 211);
+    }
+    .navbar-nav{
+        background: #A30D33;
+            padding: 0 15px;
+            border-radius: 35px 0 0 35px;
+    }
+}
+
+
+/* RESPONSIVE HEADER */
+@media screen and (max-width: 950px) and (min-width: 812px){
+    #headernav .nav .nav-item,
+    #headernav .nav .nav-item a{
+        /* margin: 0 !important; */
+        padding: 0 !important;
+        padding-right: 5px !important;
+        font-size: .7rem !important;
+    }
+    .logo-container{
+        width: 80%;
+    }
+}
+@media screen and (max-width: 811px) {
+    #headernav .nav .nav-item,
+    #headernav .nav .nav-item a{
+        /* margin: 0 !important; */
+        padding: 0 !important;
+        padding-right: 5px !important;
+        font-size: .65rem !important;
+    }
+    .logo-container{
+        width: 70%;
+    }
+}
